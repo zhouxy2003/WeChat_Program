@@ -1,0 +1,182 @@
+page{
+	overflow: scroll;
+	background-color: rgb(246, 246, 246);
+}
+.global{
+	width: 99%;
+	margin-left: 0.5%;
+	height: 2000rpx;
+	overflow: scroll;
+	/* border: 1px solid #000; */
+	background-color: rgb(246, 246, 246);
+}
+.check{
+	width: 500rpx;
+	height: 600rpx;
+	float: left;
+	margin-left: 130rpx;
+	margin-top: 300rpx;
+	border-radius: 20rpx;
+	/* border: 1px solid #000; */
+	background-color: white;
+}
+.check van-image{
+	float: left;
+	margin-left: 180rpx;
+	margin-top: 40rpx;
+}
+.inputIcon{
+	width: 40rpx;height: 40rpx;
+	float: left;
+	margin-left: 50rpx;
+	margin-top: 18rpx;
+}
+.inputWord{
+		width: 26%;
+		height: 81rpx;
+		float: left;
+		margin-left: 2%;
+		margin-top: 20rpx;
+		background-color: white;
+		font-size:25rpx;
+		left: 10rpx;
+		color:rgb(101, 101, 101);
+		
+}
+.inputData{
+	width: 70%;
+	float: right;
+	margin-right: 2%;
+	margin-top: 20rpx;
+	height: 80rpx;
+	background-color: white;
+	border-bottom: 1px solid rgb(235, 235, 235);
+}
+.inputCard{
+	margin-top: 230rpx;
+}
+
+
+
+
+.title{
+	width: 100%;
+	height: 100rpx;
+	float: left;
+	/* border: 1px solid #000; */
+}
+.title text{
+	float: left;
+	margin-left: 270rpx;
+	margin-top: 20rpx;
+	font-size: larger;
+}
+
+.name{
+	float: left;
+	width: 96%;
+	margin-left: 2%;
+	height: 210rpx;
+	/* border: 1px solid #000; */
+	background-color: white;
+	box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2), 0 6rpx 10rpx rgba(0, 0, 0, 0.1);
+	border-radius: 20rpx;
+}
+
+.name van-image{
+	float: left;
+	margin-left: 50rpx;
+	margin-top: 33rpx;
+}
+.username{
+	float: left;
+	font-size: larger;
+	margin-left: 30rpx;
+	margin-top: 45rpx;
+	/* border: 1px solid #000; */
+}
+.userphone{
+	float: left;
+	font-size: larger;
+	margin-left: 30rpx;
+	margin-top: 30rpx;
+	/* border: 1px solid #000; */
+}
+
+.dataCard{
+	float: left;
+	width: 96%;
+	margin-left: 2%;
+	height: 600rpx;
+	margin-top: 20rpx;
+	/* border: 1px solid #000; */
+}
+
+.card {
+	float: left;
+  width: 100%;
+  height: 600rpx;
+  margin: 0 auto;
+	background-color:white;
+	box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2), 0 6rpx 10rpx rgba(0, 0, 0, 0.1);
+  border-radius: 8rpx;
+  z-index: 1;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9rpx;
+}
+
+.circle {
+  padding: 0 4rpx;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 20rpx;
+  height: 20rpx;
+  padding: 2rpx;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+.card__content{
+	width: 100%;
+	height: 90%;
+	margin-top: 30rpx;
+	/* border: 1px solid #000; */
+}
+.card__content view{
+	height: 80rpx;
+	/* border: 1px solid #000; */
+}
+
+
+.cardData{
+	float: left;
+	font-size: larger;
+	margin-top: 12rpx;
+	margin-left: 100rpx;
+}
+.cardDatas{
+	float: left;
+	margin-left: 10rpx;
+	margin-top: 15rpx;
+}
+
+
+

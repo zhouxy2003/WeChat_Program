@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/userAdd/userAdd",
+    "pages/userData/userData",
+    "pages/companyAdd/companyAdd",
+    "pages/companyData/companyData"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#193133",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "招聘先锋"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./img/home.png",
+      "selectedIconPath": "./img/homeAfter.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "./img/my.png",
+      "selectedIconPath": "./img/myAfter.png"
+    }
+  
+  ]
+
+  },
+
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "__usePrivacyCheck__": true
+  
+
+  
+
+}

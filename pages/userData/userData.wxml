@@ -1,0 +1,90 @@
+<view class="global">
+<!-- 登录信息 -->
+	<!-- 遮罩层 -->
+	<van-overlay show="{{ isVisible }}">
+   	<!-- 检查块 -->
+		<view class="check">
+			<van-image width="80" height="80" round src="{{userImg}}" />
+			<view class="inputCard">
+				<view class="inputWord">
+					<image src="../../img/addName.png" class="inputIcon"></image>
+				</view>
+				<input type="text" class="inputData" placeholder="请输入姓名" value="{{username}}" bindinput="nameChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+			</view>
+			<view  class="inputCard">
+				<view class="inputWord">
+					<image src="../../img/addKey.png" class="inputIcon"></image>
+				</view>
+				<input type="password" class="inputData" placeholder="请输入密码" value="{{userkey}}" bindinput="keyChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+			</view>
+			<button mini style="float: left;width: 180rpx;margin-left: 160rpx;margin-top: 50rpx;" type="primary"  bind:tap="gotoBlock">确认</button>
+		</view>	
+	</van-overlay>
+
+<!-- 信息展示块 -->
+	<view wx:if="{{ishowData}}">
+		<view class="title">
+			<text>您的简历信息</text>
+		</view>
+		<!-- 用户名信息卡片 -->
+		<view class="name">
+			<van-image width="80" height="80" round src="{{userImg}}" />
+			<view class="username">
+				<text>用户名：</text>
+				<text>{{username}}</text>
+			</view>
+			<view class="userphone">
+				<text>联系方式：</text>
+				<text>{{Phone}}</text>
+			</view>
+		</view>
+		<view wx:for="{{arr}}" wx:key="id" wx:for-item="i">
+				<!-- 用户主要信息 -->
+		<view class="dataCard">
+			<view class="card">
+				<view class="tools">
+					<view class="circle">
+						<view class="red box"></view>
+					</view>
+					<view class="circle">
+						<view class="yellow box"></view>
+					</view>
+					<view class="circle">
+						<view class="green box"></view>
+					</view>
+				</view>
+				<view class="card__content">
+					<view>
+						<text class="cardData">最高学历：</text>
+						<text class="cardDatas">{{i.degree}}</text>
+					</view>
+					<view>
+						<text class="cardData">毕业学校：</text>
+						<text class="cardDatas">{{i.school}}</text>
+					</view>
+					<view>
+						<text class="cardData">目标岗位：</text>
+						<text class="cardDatas">{{i.job}}</text>
+					</view>
+					<view>
+						<text class="cardData">技术特点：</text>
+						<text class="cardDatas">{{i.features}}</text>
+					</view>
+					<view>
+						<text class="cardData">入职时间：</text>
+						<text class="cardDatas">{{i.jobTime}}</text>
+					</view>
+					<view>
+						<text class="cardData">所在位置：</text>
+						<text class="cardDatas">{{i.areaString}}</text>
+					</view>
+				</view>
+
+			</view>
+		</view>
+		</view>
+	
+	</view>
+
+
+</view>

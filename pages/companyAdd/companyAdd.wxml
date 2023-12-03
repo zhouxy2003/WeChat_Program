@@ -1,0 +1,100 @@
+<view class="globol">
+	<view class="title"><text>填写您的需求信息</text></view>
+	<view class="tip">
+		<van-notice-bar color="#1989fa" background="#ecf9ff" left-icon="info-o" scrollable="{{ false }}" text="请认真填写您的信息" />
+	</view>
+
+
+	<!-- 输入基本信息 -->
+	<view>
+		<view class="inputWord">
+			<image src="../../img/addName.png" class="inputIcon"></image><text>公司</text>
+		</view>
+		<input type="text" class="inputData" placeholder="请输入公司名称" value="{{name}}" bindinput="nameChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+	</view>
+	<!-- 用户名错误 -->
+	<view class="tip" wx:if="{{isShowNameErr}}">
+		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的用户名" />
+	</view>
+	<view>
+		<view class="inputWord">
+			<image src="../../img/addPhone.png" class="inputIcon"></image><text>手机号</text>
+		</view>
+		<input type="numbers" class="inputData" placeholder="请输入手机号" value="{{phone}}" bindinput="phoneChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+	</view>
+	<!-- 手机号错误 -->
+	<view class="tip" wx:if="{{isShowPhoneErr}}">
+		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="手机号有误" />
+	</view>
+	<view>
+		<view class="inputWord">
+			<image src="../../img/addKey.png" class="inputIcon"></image><text>密码</text>
+		</view>
+		<input type="password" class="inputData" maxlength="8" placeholder="请输入密码(8位以内)"  value="{{password}}" bindinput="passwordChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+	</view>
+	<view>
+		<view class="inputWord">
+			<image src="../../img/confirmKey.png" class="inputIcon"></image><text>确认密码</text>
+		</view>
+		<input type="password" class="inputData" maxlength="8" placeholder="请输入密码(8位以内)" value="{{confirmPwd}}" bindinput="AgainPasswordChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+	</view>
+	<!-- 如果密码不一致提示 -->
+	<view class="tip" wx:if="{{isShowKeyErr}}">
+		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="两次输入密码不一致" />
+	</view>
+
+	<view>
+		<view class="inputWord">
+			<image src="../../img/addSchool.png" class="inputIcon"></image><text>邮箱</text>
+		</view>
+		<input type="text" class="inputData" placeholder="请输入邮箱"  value="{{email}}" bindinput="emailChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+	</view>
+	<!-- 邮箱错误 -->
+	<view class="tip" wx:if="{{isShowEmailErr}}">
+		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的信息" />
+	</view>
+	<view>
+		<view class="inputWord">
+			<image src="../../img/addJob.png" class="inputIcon"></image><text>岗位</text>
+		</view>
+		<input type="text" class="inputData" placeholder="请输入岗位名称"  value="{{job}}" bindinput="jobChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+	</view>
+	<!-- 岗位错误 -->
+	<view class="tip" wx:if="{{isShowJobErr}}">
+		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的岗位信息" />
+	</view>
+	<view>
+		<view class="inputWord">
+			<image src="../../img/addSalary.png" class="inputIcon"></image><text>薪资待遇</text>
+		</view>
+		<input type="text" class="inputData" placeholder="请输入薪资(例如:10k)"  value="{{salary}}" bindinput="salaryChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+	</view>
+	<!-- 薪资错误 -->
+	<view class="tip" wx:if="{{isShowSalaryErr}}">
+		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的格式" />
+	</view>
+	<view>
+		<view class="inputWord">
+			<image src="../../img/addInr.png" class="inputIcon"></image><text>所需技术</text>
+		</view>
+		<input type="text" class="inputData" placeholder="请输入技术特点"   value="{{features}}" bindinput="featuresChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+	</view>
+	<!-- 技术特点错误 -->
+	<view class="tip" wx:if="{{isShowFeaturesErr}}">
+		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的信息" />
+	</view>
+
+	<!-- 选择地区 -->
+	<view class="region">
+		<van-area area-list="{{ areaList }}" value="{{area}}" bind:confirm="areacChange" title="请选择所在地区"  cancel-button-text=" ....."/>
+	</view>
+		<!-- 地区错误 -->
+		<view class="tip" wx:if="{{isShowAreaErr}}">
+		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请点击确认所在地区" />
+	</view>
+	<view class="submit">
+		<button type="primary"	plain mini bind:tap="getAllData">确认提交</button>
+	</view>
+	<view class="space"></view>
+</view>
+

@@ -1,0 +1,187 @@
+page {
+	display: block;
+	min-height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+}
+
+.input{
+	width: 400rpx;
+	height: 60rpx;
+	border: 2px solid #07C160;
+	position: fixed;
+	right: 30rpx;
+	top: 18rpx;
+	border-radius: 15rpx;
+}
+.searchIcon{
+	position: fixed;
+	right: 50rpx;
+	top: 30rpx;
+}
+.photoUser{
+	position: fixed;
+	left: 25rpx;
+	top: 15rpx;
+	
+}
+.night{
+	position: fixed;
+	left: 220rpx;
+	top: 25rpx;
+}
+.dark{
+	position: fixed;
+	left: 220rpx;
+	top: 25rpx;
+	display: none;
+}
+.userWord{
+	position: fixed;
+	font-size: larger;
+	left: 120rpx;
+	top: 25rpx;
+}
+.a{
+	background-color: black;
+}
+
+.data{
+	position: fixed;
+	top: 100rpx;
+	width: 100%;
+	height: 1200rpx;
+	overflow: scroll;
+	transition: all 0.7s;
+	/* filter: blur(12rpx); */
+	/* border: 1rpx solid #000; */
+}
+.box{
+	width: 90%;
+	margin-left: 5%;
+	height: 230rpx;
+	/* border: 1px solid; */
+	border-radius: 15rpx;
+	margin-top: 20rpx;
+	
+}
+.top{
+	width: 100%;
+	height: 90rpx;
+	/* border: 1rpx solid #000; */
+	
+}
+.job{
+	float: left;
+	margin-left: 15rpx;
+	font-size:40rpx;
+	font-weight: bold;
+	margin-top: 10rpx;
+}
+.salary{
+	float: right;
+	font-size: 40rpx;
+	margin-right: 15rpx;
+	color:rgb(38,148,146) ;
+	margin-top: 8rpx;
+}
+
+
+
+.order{
+	width: 100%;
+	height: 70rpx;
+	/* border: 1rpx solid #000; */
+	margin-left: 10rpx;
+}
+.block{
+	/* border: 1px solid #000; */
+	float: left;
+	margin-left: 15rpx;
+	margin-top: 6rpx;
+}
+.buttom{
+	width: 100%;
+	height: 70rpx;
+	/* border: 1rpx solid #000; */
+	float: left;
+}
+.company{
+	float: left;
+	font-size: large;
+	margin-left: 15rpx;
+}
+.area{
+	float: right;
+	margin-right: 15rpx;
+	font-size: large;
+}
+
+
+
+/* hr弹窗信息 */
+.tucheng{
+		position: absolute;
+		top: 220px;
+		left: 80px;
+		width: 500rpx;
+		height: 500rpx;
+		overflow: hidden;
+		background-color:white;
+		z-index: 1;
+		border-radius: 30rpx;
+}
+.HRcall{
+	float: left;
+	margin-left: 170rpx;
+	font-size: large;
+	margin-top: 20rpx;
+}
+.dia_1{
+	float: left;
+	margin-left: 200rpx;
+	margin-top: 40rpx;
+	width: 100%;
+}
+.dia_2{
+	width: 100%;
+	float: left;
+	margin-left: 120rpx;
+	margin-top: 40rpx;
+}
+.hrPhone{
+	float: left;
+	margin-left: -59rpx;
+}
+.number{
+	letter-spacing: 5rpx;
+	margin-left: 20rpx;
+}
+.dia_3{
+	width: 100%;
+	float: left;
+	margin-left: 60rpx;
+	margin-top: 60rpx;
+}
+.email{
+	float: left;
+	margin-top: -30rpx;
+}
+.emailData{
+	float: left;
+	margin-left: 33rpx;
+	margin-top: -25rpx;
+}
+.dia_4{
+	width: 100%;
+}
+.btnHr{
+	margin-left: 200rpx;
+	margin-top: 20rpx;
+	top: 10rpx;
+}
+
+

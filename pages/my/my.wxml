@@ -1,0 +1,103 @@
+<view class="user">
+	<!-- 遮罩层 -->
+	<van-overlay show="{{ isVisible }}">
+		<!-- 检查块 -->
+		<view class="check">
+			<van-image width="80" height="80" round src="{{avatarUrl}}" />
+			<view class="inputCard">
+				<view class="inputWord">
+					<image src="../../img/addName.png" class="inputIcon"></image>
+				</view>
+				<input type="text" class="inputData" placeholder="请输入企业名称" value="{{companyName}}" bindinput="nameChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+			</view>
+			<view class="inputCard">
+				<view class="inputWord">
+					<image src="../../img/addKey.png" class="inputIcon"></image>
+				</view>
+				<input type="password" class="inputData" placeholder="请输入密码" value="{{companyKey}}" bindinput="keyChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+			</view>
+			<button mini style="float: left;width: 160rpx;margin-left: 60rpx;margin-top: 50rpx;" type="warn" plain bind:tap="gobackMy">取消</button>
+			<button mini style="float: left;width: 160rpx;margin-left: 60rpx;margin-top: 50rpx;" type="primary" plain bind:tap="gotoCompanyCheck">确认</button>
+		</view>
+	</van-overlay>
+
+	<!-- 用户卡 -->
+	<view class="userCard">
+		<view class="getTag">
+			<button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar" disabled="{{islogin}}">
+				<image class="avatar" src="{{avatarUrl}}"></image>
+			</button>
+		</view>
+		<text class="userName">{{userName}}</text>
+		<text class="introduction">此人很懒，什么也没有描述</text>
+		<!-- <button open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">按钮</button> -->
+	</view>
+	<!-- 信息块 -->
+	<view class="userData">
+		<!-- 添加简历 -->
+		<view class="userVita dataCardStyle" bindtap="gotoAdd" wx:if="{{userAddVita}}">
+			<image src="../../img/addVita.png"></image>
+			<text>添加简历</text>
+			<van-icon name="arrow" size="25" />
+		</view>
+		<!-- 我的简历 -->
+		<view class="showVita dataCardStyle" bind:tap="gotoShow"  wx:if="{{userShowVita}}">
+			<image src="../../img/showVita.png"></image>
+			<text>我的简历</text>
+			<van-icon name="arrow" size="25" />
+		</view>
+			<!-- 发布职位 -->
+			<view class="userVita dataCardStyle" bindtap="gotoAddcCompany"  wx:if="{{companyAddVita}}">
+			<image src="../../img/addVita.png"></image>
+			<text>发布职位</text>
+			<van-icon name="arrow" size="25" />
+		</view>
+			<!-- 查看发布的职位 -->
+			<view class="userVita dataCardStyle" bindtap="gotoShowcCompany"   wx:if="{{companyShowVita}}">
+			<image src="../../img/showVita.png"></image>
+			<text>查看发布的职位</text>
+			<van-icon name="arrow" size="25" />
+		</view>
+		<!-- 切换企业 -->
+		<view class="aboutUs dataCardStyle" bind:tap="gotoCompany" wx:if="{{isCompany}}">
+			<image src="../../img/aboutUs.png"></image>
+			<text>切换企业登录</text>
+			<van-icon name="arrow" size="25" />
+		</view>
+		<!-- 切换用户 -->
+		<view class="aboutUs dataCardStyle" bind:tap="gotoUsers" wx:if="{{isUser}}">
+			<image src="../../img/aboutUs.png"></image>
+			<text>切换用户登录</text>
+			<van-icon name="arrow" size="25" />
+		</view>
+		<!-- 版本信息 -->
+		<view class="version dataCardStyle" bind:tap="gotoUp">
+			<van-icon name="setting-o" size="30" />
+			<text>版本信息</text>
+			<van-icon name="arrow" size="25" />
+		</view>
+		<!-- 退出登录 -->
+		<view class="aboutUs dataCardStyle" bind:tap="gotoOut" wx:if="{{isloginOut}}">
+			<image src="../../img/退出.png" style="width: 55rpx;height: 55rpx;float: left;margin-left: 40rpx;margin-top: 20rpx;margin-right: 15rpx;"></image>
+			<text>退出登录</text>
+			<van-icon name="arrow" size="25" />
+		</view>
+	</view>
+
+
+	<!-- 动画 -->
+	<view class="idea">
+		<view class="terminal-loader">
+			<view class="terminal-header">
+				<view class="terminal-title">Recruiting pioneers</view>
+				<view class="terminal-controls">
+					<view class="control close"></view>
+					<view class="control minimize"></view>
+					<view class="control maximize"></view>
+				</view>
+			</view>
+			<view class="text">Hello World!!!🌏</view>
+		</view>
+
+	</view>
+</view>

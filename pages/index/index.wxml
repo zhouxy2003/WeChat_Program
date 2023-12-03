@@ -1,0 +1,95 @@
+<view style="{{topColor}}">
+	<van-icon name="{{userImg}}" dot size="40px" class="photoUser"/>
+	<text class="userWord">用户</text>
+	<van-icon name="clock-o" size="30px" class="night" bindtap="darkWeb" />
+	<input type="text" name="text" class="input" placeholder="搜索职位名称" bindinput="selectData" />
+	<icon type="search" class="searchIcon" size="25"></icon>
+</view>
+
+
+<view wx:if="{{showCompany}}">
+	<view class="data" style="{{dataColor}}">
+	<!-- 每个块 -->
+	<view class="box" wx:for="{{companyArr}}" wx:key="id" wx:for-item="i" style="{{boxColor}}" bindtap="getblock" data-id="{{i.id}}">
+		<!-- 介绍和薪资 -->
+		<view class="top">
+			<text class="job" style="{{jobColor}}">{{i.job}}</text>
+			<text class="salary">{{i.salary}}</text>
+		</view>
+		<!-- 要求 -->
+		<view class="order">
+			<!-- 这里做一个循环 -->
+			<text class="block" wx:for="{{i.order}}"  wx:key="id" wx:for-item="j" style="{{blockColor}}">{{j}}</text>
+		</view>
+		<!-- 公司和地区 -->
+		<view class="buttom">
+			<text class="company">{{i.company}}</text>
+			<text class="area">{{i.area}}</text>
+		</view>
+	</view>
+</view>
+<van-overlay show="{{ showLayer }}">
+	<view class="tucheng" wx:if="{{showDia}}">
+		<text class="HRcall">HR联系方式</text>
+		<view class="dia_1">
+			<van-image round width="3.5rem" height="3.4rem" src="https://img.ixintu.com/download/jpg/201912/d38ac2d856abcd16ba0f2c4b24735cd5.jpg!con" class="hrImg" />
+		</view>
+		<view class="dia_2">
+			<van-icon name="phone-o" size="30" class="hrPhone" />
+			<text class="number" user-select="true">{{hrPhoneNum}}</text>
+		</view>
+		<view class="dia_3">
+			<van-icon name="envelop-o" class="email" size="30" />
+			<text class="emailData" user-select="true">{{hrEmail}}</text>
+		</view>
+	 <view class="dia_4">
+		<button type="primary" class="btnHr" plain="true" bindtap="btnHR" size="mini">确认</button>
+	 </view>
+	</view>
+</van-overlay>
+</view>
+
+
+<view wx:if="{{showUser}}">
+	<view class="data" style="{{dataColor}}">
+	<!-- 每个块 -->
+	<view class="box" wx:for="{{usersArr}}" wx:key="id" wx:for-item="i" style="{{boxColor}}" bindtap="getblock" data-id="{{i.id}}">
+		<!-- 介绍和薪资 -->
+		<view class="top">
+			<text class="job" style="{{jobColor}}">岗位:{{i.job}}</text>
+			<text class="salary">期望:{{i.salary}}</text>
+		</view>
+		
+		<!-- 要求 -->
+		<view class="order">
+			<!-- 这里做一个循环 -->
+			<text class="block" style="{{blockColor}}">特点：{{i.features}}</text>
+		</view>
+		<!-- 公司和地区 -->
+		<view class="buttom">
+			<text class="company">姓名:{{i.name}}-{{i.degree}}</text>
+			
+			<text class="area">{{i.areaString}}</text>
+		</view>
+	</view>
+</view>
+<van-overlay show="{{ showLayer }}">
+	<view class="tucheng" wx:if="{{showDia}}">
+		<text class="HRcall" style="float: left;margin-left: 140rpx;">求职者联系方式</text>
+		<view class="dia_1">
+			<van-image round width="3.5rem" height="3.4rem" src="https://img.ixintu.com/download/jpg/201912/d38ac2d856abcd16ba0f2c4b24735cd5.jpg!con" class="hrImg" />
+		</view>
+		<view class="dia_2">
+			<van-icon name="phone-o" size="30" class="hrPhone" />
+			<text class="number" user-select="true">{{hrPhoneNum}}</text>
+		</view>
+		<view class="dia_3">
+			<van-icon name="envelop-o" class="email" size="30" />
+			<text class="emailData" user-select="true">{{hrEmail}}</text>
+		</view>
+	 <view class="dia_4">
+		<button type="primary" class="btnHr" plain="true" bindtap="btnHR" size="mini">确认</button>
+	 </view>
+	</view>
+</van-overlay>
+</view>

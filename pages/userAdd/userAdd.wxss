@@ -1,0 +1,89 @@
+.globol{
+	width: 100%;
+	height: 2000rpx;
+
+	/* border: 1px solid #000; */
+	background-color: rgb(246, 246, 246);
+}
+
+.title{
+	width: 280rpx;
+	height: 80rpx;
+	float: left;
+	margin-left: 235rpx;
+	margin-top: 20rpx;
+	/* border: 1px solid #000; */
+	/* background-color: white; */
+	border-radius: 10rpx;
+	/* box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2), 0 6rpx 10rpx rgba(0, 0, 0, 0.1); */
+}
+.title text{
+	font-size: 30rpx;
+	float: left;
+	margin-top: 12rpx;
+	margin-left: 15rpx;
+}
+.tip{
+	width: 99%;
+	margin-left: 0.5%;
+	float: left;
+}
+.inputIcon{
+	width: 40rpx;height: 40rpx;
+	float: left;
+	margin-left: 40rpx;
+	margin-top: 18rpx;
+}
+.inputWord{
+		width: 26%;
+		height: 81rpx;
+		float: left;
+		margin-left: 2%;
+		background-color: white;
+		font-size:25rpx;
+		left: 20rpx;
+		color:rgb(101, 101, 101);
+		
+}
+.inputWord text{
+	float: left;
+	margin-left: 10rpx;
+	margin-top: 20rpx;
+}
+.inputData{
+	width: 70%;
+	float: right;
+	margin-right: 2%;
+	height: 80rpx;
+	background-color: white;
+	border-bottom: 1px solid rgb(235, 235, 235);
+}
+.cal{
+	width: 96%;
+	float: left;
+	margin-left: 2%;
+	height: 550rpx;
+	overflow: hidden;
+	margin-top: 10rpx;
+}
+.region{
+	width: 96%;
+	float: left;
+	margin-left: 2%;
+	height: 550rpx;
+	overflow: hidden;
+	margin-top: 10rpx;
+	/* border: 1px solid #000; */
+}
+.submit{
+	float: left;
+	width: 200rpx;
+	margin-top: 30rpx;
+	margin-left: 270rpx;
+	margin-bottom: 30rpx;
+}
+.space{
+	width: 100%;
+	float: left;
+	height: 60rpx;
+}
