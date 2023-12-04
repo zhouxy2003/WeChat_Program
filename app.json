@@ -5,7 +5,8 @@
     "pages/userAdd/userAdd",
     "pages/userData/userData",
     "pages/companyAdd/companyAdd",
-    "pages/companyData/companyData"
+    "pages/companyData/companyData",
+    "pages/ai/ai"
   ],
   "window": {
     "navigationBarBackgroundColor": "#193133",
@@ -18,6 +19,12 @@
       "text": "首页",
       "iconPath": "./img/home.png",
       "selectedIconPath": "./img/homeAfter.png"
+    },
+    {
+      "pagePath": "pages/ai/ai",
+      "text": "AI助手",
+      "iconPath": "./img/ai.png",
+      "selectedIconPath": "./img/aiafter.png"
     },
     {
       "pagePath": "pages/my/my",

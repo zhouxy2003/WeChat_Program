@@ -1,0 +1,19 @@
+<view class="global">
+  <view class="title"></view>
+  <scroll-view class="chatBox" scroll-into-view="{{scrollIntoView}}" scroll-y="true">
+  <!-- 显示对话框 -->
+  <view wx:for="{{chatdata}}" wx:for-index="index" wx:for-item="i" wx:key="index">
+    <view class="{{index % 2 === 0 ? 'ai' : 'user'}}">
+      <text user-select="true">{{i}}</text>
+    </view>
+  </view>
+  <view id="bottom"></view>
+</scroll-view>
+
+
+  <!-- 输入框 -->
+  <view style="margin-top: 60rpx;display: flex;">
+    <textarea class="userInput" placeholder="请输入您的需求" maxlength="40" value="{{userSay}}" bindinput="getInput"></textarea>
+    <button type="primary" bind:tap="sendMessage" plain>发送</button>
+  </view>
+</view>
