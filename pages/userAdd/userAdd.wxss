@@ -31,19 +31,21 @@
 .inputIcon{
 	width: 40rpx;height: 40rpx;
 	float: left;
-	margin-left: 40rpx;
+	margin-left: 20rpx;
 	margin-top: 18rpx;
+	/* border: 1px solid #000; */
 }
 .inputWord{
-		width: 26%;
+		width: 24%;
 		height: 81rpx;
 		float: left;
-		margin-left: 2%;
+		margin-left: 1%;
 		background-color: white;
 		font-size:25rpx;
 		left: 20rpx;
 		color:rgb(101, 101, 101);
-		
+		/* border: 1px solid #000; */
+
 }
 .inputWord text{
 	float: left;
@@ -53,7 +55,7 @@
 .inputData{
 	width: 70%;
 	float: right;
-	margin-right: 2%;
+	margin-right: 5%;
 	height: 80rpx;
 	background-color: white;
 	border-bottom: 1px solid rgb(235, 235, 235);
