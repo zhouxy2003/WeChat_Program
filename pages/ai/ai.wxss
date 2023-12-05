@@ -1,27 +1,18 @@
 /* chat.wxss */
+
 .global {
-  width: 97%;
+  width: 100%;
   height: 1300rpx;
-  /* overflow: scroll; */
-  margin-left: 1.5%;
-  background-color: rgb(246, 246, 246);
+  background-color:white;
   transition: all 0.8s;
 }
-/* .title{
-  width: 100%;
-  height: 80rpx;
-  border: 1px solid #000;
-} */
-
 
 /* 聊天的盒子容器 */
 .chatBox {
-	width: 98%;
-	margin-left: 1%;
+  width: 96%;
+  margin-left: 2%;
   height: 1100rpx;
   overflow: scroll;
-  /* margin-top: 0rpx; */
-  /* border: 1px solid #000; */
 }
 
 /* ai的对话框 */
@@ -29,14 +20,14 @@
   width: fit-content;
   height: auto;
   overflow: hidden;
-  font-size: larger;
+  font-size: large;
   text-align: left;
-  background-color: rgb(227, 229, 233);
+  background-color: rgb(233, 233, 233);
   border-radius: 20rpx;
   color: black;
   font-weight: bold;
   margin-bottom: 10px;
-  padding: 10px; /* 添加padding属性来增加文字和框之间的距离 */
+  padding: 10px;
   margin-top: 20rpx;
 }
 
@@ -45,38 +36,101 @@
   width: fit-content;
   height: auto;
   overflow: hidden;
-  font-size: larger;
+  font-size: large;
   text-align: left;
   background-color: rgb(88, 103, 246);
   border-radius: 10rpx;
   color: white;
   font-weight: bold;
   margin-bottom: 10px;
-  margin-left: auto; /* 添加左边距，使其靠右对齐 */
-	padding: 10px; /* 添加padding属性来增加文字和框之间的距离 */
-	border-radius: 20rpx;
+  margin-left: auto;
+  padding: 10px;
+  border-radius: 20rpx;
+}
+
+/* icon的样式 */
+.icon {
+  /* font-size: 20px; */
+  /* margin-right: 5px; */
+  /* margin-top: 10rpx; */
+}
+
+/* ai类对话框的图标靠左 */
+.aiIcon {
+   display: flex;
+   justify-content: flex-start;
+   
+}
+
+/* user类对话框的图标靠右 */
+.userIcon {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .userInput {
   width: 80%;
   height: 100rpx;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   word-break: break-all;
-  /* display: flex; */
-  background-color: rgb(246, 246, 246);
-  border: 4px solid white;
+  background-color: rgb(243, 243, 246);
+  /* border: 4px solid white; */
+  padding: 20rpx 0;
+  justify-content: flex-start;
+  margin-left: 15rpx;
 }
-.userInput:hover{
-  border: 4px solid rgb(96, 176, 74);
-}
-/* .userInput::after{
-  background-color: rgb(246, 246, 246);
-} */
 
-button {
-  width: 18%;
-  height: 100rpx;
-  /* display: flex; */
-  margin-left: 1%;
+
+.btn-class-name {
+  width: 40px;
+  height: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.3s;
+  justify-content: flex-end;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+}
+
+.btn-class-name .back {
+  background: rgb(0, 128, 0);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-class-name .front {
+  background: -webkit-linear-gradient(0deg, rgba(0, 255, 0, 0.6) 20%, rgba(0, 255, 0) 50%);
+  background: linear-gradient(0deg, rgba(0, 255, 0, 0.6) 20%, rgba(0, 255, 0) 50%);
+  box-shadow: 0 0.5em 1em -0.4em rgba(0, 128, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid rgb(0, 128, 0);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  transform: translateY(-15%);
+  transition: 0.15s;
+  color: rgb(0, 128, 0);
+}
+
+.btn-class-name:active .front {
+  transform: translateY(0%);
+  box-shadow: 0 0;
 }
 

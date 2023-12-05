@@ -1,3 +1,4 @@
+
 Page({
   data: {
     chatdata: [
@@ -22,14 +23,14 @@ Page({
         isAnswer: false,
         scrollToBottom: true // 在发送消息后设置为true，以便滚动到底部
       })
-      this.getToken();
+      this.getAnswerByAi();
       this.setData({
-        scrollIntoView: 'bottom' // 发送消息后滚动到底部
+        scrollIntoView: 'bottom', // 发送消息后滚动到底部
       });
     }
   },
   // 发起数据请求
-  getToken() {
+  getAnswerByAi() {
     const url_token = "https://aip.baidubce.com/oauth/2.0/token?client_id=hi0uWUpMrlpQ4UxnyX5PmKXu&client_secret=HParNc0D1AvzAKY2sqbvCjIKuvhqOpmY&grant_type=client_credentials";
 
     wx.request({
@@ -65,6 +66,7 @@ Page({
             this.setData({
               chatdata: temp,
               isAnswer: true,
+              userSay:" ",
               scrollToBottom: true // 在接收到回复后设置为true，以便滚动到底部
             });
             console.log(res.data);

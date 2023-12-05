@@ -1,19 +1,26 @@
-<view class="global">
-  <view class="title"></view>
-  <scroll-view class="chatBox" scroll-into-view="{{scrollIntoView}}" scroll-y="true">
-  <!-- 显示对话框 -->
-  <view wx:for="{{chatdata}}" wx:for-index="index" wx:for-item="i" wx:key="index">
-    <view class="{{index % 2 === 0 ? 'ai' : 'user'}}">
-      <text user-select="true">{{i}}</text>
+  <view class="global">
+    <view class="title"></view>
+    <scroll-view class="chatBox" scroll-into-view="{{scrollIntoView}}" scroll-y="true">
+      <!-- 显示对话框 -->
+      <view wx:for="{{chatdata}}" wx:for-index="index" wx:for-item="i" wx:key="index">
+        <van-icon name="{{index%2===0?'https://z1.ax1x.com/2023/12/05/pi6twzn.png':'https://z1.ax1x.com/2023/12/05/pi6tRJJ.png'}}" size="55rpx" class="icon {{index % 2 === 0 ? 'aiIcon' : 'userIcon'}}"></van-icon>
+        <view class="{{index % 2 === 0 ? 'ai' : 'user'}}">
+          <text user-select="true">{{i}}</text>
+        </view>
+      </view>
+      <view id="bottom"></view>
+    </scroll-view>
+
+
+    <!-- 输入框 -->
+    <view style="margin-top: 60rpx;display: flex;">
+      <textarea class="userInput" placeholder="请输入您的需求" maxlength="40" value="{{userSay}}" bindinput="getInput" auto-height></textarea>
+      <!-- <van-icon name="guide-o" bind:tap="sendMessage" size="40" color="green"/> -->
+      <view class="btn-class-name" bind:tap="sendMessage">
+        <view class="back"></view>
+        <view class="front"></view>
+      </view>
     </view>
-  </view>
-  <view id="bottom"></view>
-</scroll-view>
 
 
-  <!-- 输入框 -->
-  <view style="margin-top: 60rpx;display: flex;">
-    <textarea class="userInput" placeholder="请输入您的需求" maxlength="40" value="{{userSay}}" bindinput="getInput"></textarea>
-    <button type="primary" bind:tap="sendMessage" plain>发送</button>
   </view>
-</view>
