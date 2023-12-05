@@ -6,15 +6,15 @@
 		<view class="check">
 			<van-image width="80" height="80" round src="{{userImg}}" />
 			<view class="inputCard">
-				<!-- <view class="inputWord">
+				<view class="inputWord">
 					<image src="../../img/addName.png" class="inputIcon"></image>
-				</view> -->
+				</view>
 				<input type="text" class="inputData" placeholder="请输入姓名" value="{{username}}" bindinput="nameChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
 			</view>
 			<view  class="inputCard">
-				<!-- <view class="inputWord">
+				<view class="inputWord">
 					<image src="../../img/addKey.png" class="inputIcon"></image>
-				</view> -->
+				</view>
 				<input type="password" class="inputData" placeholder="请输入密码" value="{{userkey}}" bindinput="keyChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
 			</view>
 			<button mini style="float: left;width: 180rpx;margin-left: 160rpx;margin-top: 50rpx;" type="primary"  bind:tap="gotoBlock">确认</button>

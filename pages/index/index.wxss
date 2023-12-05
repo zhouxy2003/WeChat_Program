@@ -123,65 +123,83 @@ page {
 
 
 /* hr弹窗信息 */
-.tucheng{
-		position: absolute;
-		top: 220px;
-		left: 80px;
-		width: 500rpx;
-		height: 500rpx;
-		overflow: hidden;
-		background-color:white;
-		z-index: 1;
-		border-radius: 30rpx;
+.tucheng {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500rpx;
+  height: 500rpx;
+  overflow: hidden;
+  background-color: white;
+  z-index: 1;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.HRcall{
-	float: left;
-	margin-left: 170rpx;
-	font-size: large;
-	margin-top: 20rpx;
+
+.HRcall {
+  font-size: large;
+  margin-top: 0;
+  text-align: center;
+  padding-top: 20rpx;
 }
-.dia_1{
-	float: left;
-	margin-left: 200rpx;
-	margin-top: 40rpx;
-	width: 100%;
+
+
+.dia_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+  width: 100%;
 }
-.dia_2{
-	width: 100%;
-	float: left;
-	margin-left: 120rpx;
-	margin-top: 40rpx;
+
+
+.dia_2 {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
 }
+
 .hrPhone{
-	float: left;
-	margin-left: -59rpx;
+	justify-content: flex-start;
+	margin-left: -80rpx;
 }
 .number{
 	letter-spacing: 5rpx;
-	margin-left: 20rpx;
+	margin-left: 30rpx;
+	justify-content: flex-end;
+	margin-top: 10rpx;
 }
-.dia_3{
-	width: 100%;
-	float: left;
-	margin-left: 60rpx;
-	margin-top: 60rpx;
+.dia_3 {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
 }
 .email{
-	float: left;
-	margin-top: -30rpx;
+	justify-content: flex-start;
+	margin-left: -20rpx;
 }
 .emailData{
-	float: left;
-	margin-left: 33rpx;
-	margin-top: -25rpx;
+	justify-content:flex-end;
+	margin-left: 20rpx;
 }
-.dia_4{
-	width: 100%;
+.dia_4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
 }
+
 .btnHr{
-	margin-left: 200rpx;
-	margin-top: 20rpx;
-	top: 10rpx;
+	/* margin-left: 200rpx; */
+	/* align-items: center;
+	justify-content: center;
+	/* margin-top: 20rpx; */
+	/* top: 10rpx;  */
 }
 
 

@@ -1,6 +1,11 @@
   <view class="global">
     <view class="title"></view>
     <scroll-view class="chatBox" scroll-into-view="{{scrollIntoView}}" scroll-y="true">
+      <van-notice-bar
+        left-icon="volume-o"
+        text="鸿蒙系统暂不与AI助手兼容，请尝试切换设备后重新登录后再进行尝试"
+      />
+
       <!-- 显示对话框 -->
       <view wx:for="{{chatdata}}" wx:for-index="index" wx:for-item="i" wx:key="index">
         <van-icon name="{{index%2===0?'https://z1.ax1x.com/2023/12/05/pi6twzn.png':'https://z1.ax1x.com/2023/12/05/pi6tRJJ.png'}}" size="55rpx" class="icon {{index % 2 === 0 ? 'aiIcon' : 'userIcon'}}"></van-icon>
@@ -13,7 +18,7 @@
 
 
     <!-- 输入框 -->
-    <view style="margin-top: 60rpx;display: flex;">
+    <view style="margin-top: 100rpx;display: flex;">
       <textarea class="userInput" placeholder="请输入您的需求" maxlength="40" value="{{userSay}}" bindinput="getInput" auto-height></textarea>
       <!-- <van-icon name="guide-o" bind:tap="sendMessage" size="40" color="green"/> -->
       <view class="btn-class-name" bind:tap="sendMessage">
