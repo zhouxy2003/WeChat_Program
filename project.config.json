@@ -26,5 +26,6 @@
     "tabIndent": "auto",
     "tabSize": 2
   },
-  "cloudfunctionRoot": "Cloud/"
+  "cloudfunctionRoot": "cloudfunctions/",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
 }

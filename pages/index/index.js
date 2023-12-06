@@ -128,6 +128,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'testRequest',
+      // 传给云函数的参数
+      data: {
+        a: 1,
+        b: 2,
+      },
+      success: function(res) {
+        console.log(res.result.sum) // 3
+      },
+      fail: console.error
+    })
+
+
     const db = wx.cloud.database();
     // console.log(db);
     let that = this;

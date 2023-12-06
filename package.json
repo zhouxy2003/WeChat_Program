@@ -4,6 +4,8 @@
     "@vant/weapp": "^1.11.1",
     "echarts": "^5.4.3",
     "markdown-it": "^13.0.2",
+    "request-promise": "^4.2.6",
+    "wx-server-sdk": "^2.6.3",
     "yarn": "^1.22.21"
   }
 }
