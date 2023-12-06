@@ -10,6 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    age:"",
     areaList,
     name: "",
     phone: "",
@@ -26,6 +27,7 @@ Page({
     area: "110110",
     areaString: "",
     isShowNameErr: false,
+    isShowAgeErr:false,
     isShowPhoneErr: false,
     isShowKeyErr: false,
     isShowDegreeErr: false,
@@ -43,6 +45,11 @@ Page({
   nameChange(e) {
     this.setData({
       name: e.detail.value
+    })
+  },
+  ageChange(e){
+    this.setData({
+      age:e.detail.value
     })
   },
   //电话
@@ -128,6 +135,7 @@ Page({
       //点击先判断如果之前弹窗警告了，但输入正确后 隐藏弹窗
       let conditions = [
         ap.name,
+        ap.age,
         ap.phone,
         ap.password,
         ap.confirmPwd,
@@ -140,6 +148,7 @@ Page({
       ];
       let names = [
         "name",
+        "age",
         "phone",
         "password",
         "confirmPwd",
@@ -164,6 +173,11 @@ Page({
               isShowNameErr: false
             })
             break;
+          case 'age':
+            this.setData({
+              isShowAgeErr:false
+            })
+            break;  
           case 'phone':
             this.setData({
               isShowPhoneErr: false
@@ -220,7 +234,7 @@ Page({
         })
       }
       //判断是否存在空值
-      if (ap.name.trim() !== "" && ap.phone.trim() !== "" && ap.password.trim() !== "" && ap.confirmPwd.trim() !== "" && ap.Degree.trim() !== "" && ap.school.trim() != "" && ap.job.trim() !== "" && ap.salary.trim() !== "" && ap.features.trim() !== "" && ap.areaString.trim() !== "" && ap.clickTime && ap.clickArea && ap.password === ap.confirmPwd) {
+      if (ap.name.trim() !== ""&&ap.age.trim()!=="" && ap.phone.trim() !== "" && ap.password.trim() !== "" && ap.confirmPwd.trim() !== "" && ap.Degree.trim() !== "" && ap.school.trim() != "" && ap.job.trim() !== "" && ap.salary.trim() !== "" && ap.features.trim() !== "" && ap.areaString.trim() !== "" && ap.clickTime && ap.clickArea && ap.password === ap.confirmPwd) {
         wx.showToast({
           title: '提交成功',
           icon: 'success',
@@ -235,6 +249,7 @@ Page({
         const db = wx.cloud.database();
         db.collection('users').add({
           data:{
+            age:ap.age,
             areaString: ap.areaString,
             degree: ap.Degree,
             features: ap.features,
@@ -264,6 +279,7 @@ Page({
         })
         let conditions = [
           ap.name,
+          ap.age,
           ap.phone,
           ap.password,
           ap.confirmPwd,
@@ -276,6 +292,7 @@ Page({
         ];
         let names = [
           "name",
+          "age",
           "phone",
           "password",
           "confirmPwd",
@@ -298,6 +315,11 @@ Page({
             case 'name':
               this.setData({
                 isShowNameErr: true
+              })
+              break;
+              case 'age':
+              this.setData({
+                isShowAgeErr: true
               })
               break;
             case 'phone':

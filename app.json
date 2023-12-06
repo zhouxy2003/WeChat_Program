@@ -31,8 +31,8 @@
     {
       "pagePath": "pages/analyse/analyse",
       "text": "简历分析",
-      "iconPath": "./img/ai.png",
-      "selectedIconPath": "./img/aiafter.png"
+      "iconPath": "./img/分析1.png",
+      "selectedIconPath": "./img/分析2.png"
     },
     {
       "pagePath": "pages/my/my",

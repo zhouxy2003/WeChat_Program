@@ -11,13 +11,9 @@ function initRadarChart(canvas, width, height, dpr) {
     devicePixelRatio: dpr // new
   });
   canvas.setChart(chart);
-  wx.request({
-    url: 'http://example.com/user',
-    method:'GET',
-    success:res=>{
+
       var radarOption = {
         backgroundColor: "#ffffff",
-        
         xAxis: {
           show: false
         },
@@ -49,12 +45,20 @@ function initRadarChart(canvas, width, height, dpr) {
           }
           ]
         },
-       
+        series: [{
+          type: 'radar',
+          data: [
+          {
+            value: [800,890,1000,700,810],
+            name: '指数'
+          }
+          ]
+        }]
       
       };
       chart.setOption(radarOption);
-    }
-  })
+    
+
 
  
   return chart;
@@ -70,15 +74,6 @@ function initGaugeChart(canvas, width, height, dpr) {
   });
   canvas.setChart(chart);
   //请求测试
-  let user={
-    name:"张三"
-  }
-  wx.request({
-    url: 'http://example.com/user',
-    method:"POST",
-    data:JSON.stringify(user),
-    success:res=>{
-      // console.log(res.data.value);
       var gaugeOption = {
         backgroundColor: "#ffffff",
         series: [
@@ -158,24 +153,23 @@ function initGaugeChart(canvas, width, height, dpr) {
             },
             data: [
               {
-                value: res.data.value,
+                value: 0.7,
                 name:'简历得分'
               }
             ]
           }
         ]
       };
-      chart.setOption(gaugeOption);
-    }
-  })
- 
+      
+    
 
  
+
+    chart.setOption(gaugeOption);
   return chart;
 }
  
 Page({
-  
   data: {
     // userName:"简历分析",
     ec: {
