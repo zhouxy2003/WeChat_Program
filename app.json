@@ -6,7 +6,8 @@
     "pages/userData/userData",
     "pages/companyAdd/companyAdd",
     "pages/companyData/companyData",
-    "pages/ai/ai"
+    "pages/ai/ai",
+    "pages/analyse/analyse"
   ],
   "window": {
     "navigationBarBackgroundColor": "#193133",
@@ -23,6 +24,12 @@
     {
       "pagePath": "pages/ai/ai",
       "text": "AI助手",
+      "iconPath": "./img/ai.png",
+      "selectedIconPath": "./img/aiafter.png"
+    },
+    {
+      "pagePath": "pages/analyse/analyse",
+      "text": "简历分析",
       "iconPath": "./img/ai.png",
       "selectedIconPath": "./img/aiafter.png"
     },

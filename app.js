@@ -14,6 +14,7 @@ App({
     showCompany:true,
     isUpdateUser:false,
     isUpdateCompany:false,
+    analyesName:"",
   }
 })
 

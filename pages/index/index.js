@@ -143,7 +143,7 @@ Page({
           list: comData
         });
         app.globalData.companyDataArr = comData;
-        console.log(comData[0]._id);
+        console.log(comData);
       }
     });
     //用户数据

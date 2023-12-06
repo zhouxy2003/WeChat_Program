@@ -1,0 +1,22 @@
+<view class="global">
+	<view class="container">
+		<view>
+			<text class="title">简历分析报告</text>
+		</view>
+		<view class="tools">
+			<view class="circle">
+				<view class="red box"></view>
+			</view>
+			<view class="circle">
+				<view class="yellow box"></view>
+			</view>
+			<view class="circle">
+				<view class="green box"></view>
+			</view>
+			<view  class="circle"><tex>张三</tex></view>
+		</view>
+		<ec-canvas id="mychart-dom-gauge" style="width: 98%; height: 500rpx;margin-top: 0;display: flex;margin-left: 1%; margin-top: 0rpx;" canvas-id="mychart-gauge" ec="{{ ec }}"></ec-canvas>
+		<ec-canvas id="mychart-dom-gauge" style="width: 98%; height: 500rpx;margin-top: 0;display: flex;margin-left: 1%;" canvas-id="mychart-gauge" ec="{{ ec1 }}"></ec-canvas>
+
+	</view>
+</view>

@@ -75,7 +75,7 @@
 </view>
 <van-overlay show="{{ showLayer }}">
 	<view class="tucheng" wx:if="{{showDia}}">
-		<text class="HRcall" style="float: left;margin-left: 140rpx;">求职者联系方式</text>
+		<text class="HRcall">求职者联系方式</text>
 		<view class="dia_1">
 			<van-image round width="3.5rem" height="3.4rem" src="https://img.ixintu.com/download/jpg/201912/d38ac2d856abcd16ba0f2c4b24735cd5.jpg!con" class="hrImg" />
 		</view>

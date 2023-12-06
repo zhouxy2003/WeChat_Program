@@ -109,7 +109,7 @@
 		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请点击确认所在地区" />
 	</view>
 	<view class="submit">
-		<button type="primary"	plain mini bind:tap="getAllData">确认提交</button>
+		<button type="primary"	plain mini bind:tap="getAllData">提交</button>
 	</view>
 	<view class="space"></view>
 </view>
