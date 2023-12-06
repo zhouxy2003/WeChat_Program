@@ -1,95 +1,83 @@
-.globol{
-	width: 100%;
-	height: 2000rpx;
+.globol {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-
-	/* border: 1px solid #000; */
-	background-color: rgb(246, 246, 246);
+  align-items: center;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
 }
 
-.title{
-	width: 280rpx;
-	height: 80rpx;
-	float: left;
-	margin-left: 235rpx;
-	margin-top: 20rpx;
-	/* border: 1px solid #000; */
-	/* background-color: white; */
-	border-radius: 10rpx;
-	/* box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2), 0 6rpx 10rpx rgba(0, 0, 0, 0.1); */
+.title {
+  width: 280rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
 }
-.title text{
-	font-size: 30rpx;
-	float: left;
-	margin-top: 12rpx;
-	margin-left: 15rpx;
-}
-.tip{
-	width: 99%;
-	margin-left: 0.5%;
-	float: left;
-}
-.inputIcon{
-	width: 40rpx;height: 40rpx;
-	float: left;
-	margin-left: 18rpx;
-	margin-top: 18rpx;
-	/* border: 1px solid #000; */
-}
-.inputWord{
-		width: 24%;
-		height: 81rpx;
-		float: left;
-		margin-left: 1%;
-		background-color: white;
-		font-size:25rpx;
-		left: 20rpx;
-		color:rgb(101, 101, 101);
-		/* border: 1px solid #000; */
 
+.title text {
+  font-size: 30rpx;
+  margin-top: 12rpx;
+  margin-left: 15rpx;
 }
-.inputWord text{
-	float: left;
-	margin-left: 10rpx;
-	margin-top: 20rpx;
+
+.tip {
+  width: 100%;
+  margin-top: 10rpx;
 }
-.inputData{
-	width: 70%;
-	float: right;
-	margin-right: 5%;
-	height: 80rpx;
-	background-color: white;
-	border-bottom: 1px solid rgb(235, 235, 235);
+
+.inputIcon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 50rpx;
+  margin-top: 18rpx;
 }
-.cal{
-	width: 96%;
-	float: left;
-	margin-left: 2%;
-	height: 550rpx;
-	overflow: hidden;
-	margin-top: 10rpx;
+
+.inputWord {
+  width: 40%;
+  height: 81rpx;
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  font-size: 25rpx;
+  left: 20rpx;
+  color: rgb(101, 101, 101);
 }
-.region{
-	width: 96%;
-	float: left;
-	margin-left: 2%;
-	height: 550rpx;
-	overflow: hidden;
-	margin-top: 10rpx;
-	/* border: 1px solid #000; */
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
 }
-.submit{
-	float: left;
-	width: 200rpx;
-	margin-top: 30rpx;
-	margin-left: 270rpx;
-	margin-bottom: 30rpx;
+
+.inputWord text {
+  margin-left: 10rpx;
+  margin-top: 20rpx;
 }
-.space{
+
+.inputData {
 	width: 100%;
-	float: left;
-	height: 60rpx;
+  height: 80rpx;
+  background-color: white;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.cal,
+.region {
+  width: 100%;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  height: 550rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.submit {
+  width: 200rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.space {
+  width: 100%;
+  height: 60rpx;
 }

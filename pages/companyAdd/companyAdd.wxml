@@ -6,7 +6,7 @@
 
 
 	<!-- 输入基本信息 -->
-	<view>
+	<view  class="inputContainer">
 		<view class="inputWord">
 			<image src="../../img/addName.png" class="inputIcon"></image><text>公司</text>
 		</view>
@@ -16,7 +16,7 @@
 	<view class="tip" wx:if="{{isShowNameErr}}">
 		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的用户名" />
 	</view>
-	<view>
+	<view  class="inputContainer">
 		<view class="inputWord">
 			<image src="../../img/addPhone.png" class="inputIcon"></image><text>手机号</text>
 		</view>
@@ -26,13 +26,13 @@
 	<view class="tip" wx:if="{{isShowPhoneErr}}">
 		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="手机号有误" />
 	</view>
-	<view>
+	<view  class="inputContainer">
 		<view class="inputWord">
 			<image src="../../img/addKey.png" class="inputIcon"></image><text>密码</text>
 		</view>
 		<input type="password" class="inputData" maxlength="8" placeholder="请输入密码(8位以内)"  value="{{password}}" bindinput="passwordChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
 	</view>
-	<view>
+	<view  class="inputContainer">
 		<view class="inputWord">
 			<image src="../../img/confirmKey.png" class="inputIcon"></image><text>确认密码</text>
 		</view>
@@ -43,7 +43,7 @@
 		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="两次输入密码不一致" />
 	</view>
 
-	<view>
+	<view  class="inputContainer">
 		<view class="inputWord">
 			<image src="../../img/addSchool.png" class="inputIcon"></image><text>邮箱</text>
 		</view>
@@ -53,7 +53,7 @@
 	<view class="tip" wx:if="{{isShowEmailErr}}">
 		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的信息" />
 	</view>
-	<view>
+	<view  class="inputContainer">
 		<view class="inputWord">
 			<image src="../../img/addJob.png" class="inputIcon"></image><text>岗位</text>
 		</view>
@@ -63,7 +63,7 @@
 	<view class="tip" wx:if="{{isShowJobErr}}">
 		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的岗位信息" />
 	</view>
-	<view>
+	<view  class="inputContainer">
 		<view class="inputWord">
 			<image src="../../img/addSalary.png" class="inputIcon"></image><text>薪资待遇</text>
 		</view>
@@ -73,7 +73,7 @@
 	<view class="tip" wx:if="{{isShowSalaryErr}}">
 		<van-notice-bar color="rgb(228,116,112)" background="rgb(252,240,240)" left-icon="info-o" scrollable="{{ false }}" text="请输入正确的格式" />
 	</view>
-	<view>
+	<view  class="inputContainer">
 		<view class="inputWord">
 			<image src="../../img/addInr.png" class="inputIcon"></image><text>所需技术</text>
 		</view>
