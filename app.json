@@ -1,14 +1,16 @@
 {
   "cloud": true,
   "pages": [
+    
+    
     "pages/index/index",
     "pages/my/my",
+    "pages/analyse/analyse",
     "pages/userAdd/userAdd",
     "pages/userData/userData",
     "pages/companyAdd/companyAdd",
     "pages/companyData/companyData",
-    "pages/ai/ai",
-    "pages/analyse/analyse"
+    "pages/ai/ai"
   ],
   "window": {
     "navigationBarBackgroundColor": "#193133",

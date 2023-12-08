@@ -19,4 +19,7 @@
 		<ec-canvas id="mychart-dom-gauge" style="width: 98%; height: 500rpx;margin-top: 0;display: flex;margin-left: 1%;" canvas-id="mychart-gauge" ec="{{ ec1 }}"></ec-canvas>
 
 	</view>
+  <button bind:tap="gettest">This is test botton</button>
+  <input bindinput="userInputAction"  class="input" name="userName" placeholder="请输入用户名" auto-focus="true" />
+
 </view>
