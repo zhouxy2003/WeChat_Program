@@ -70,7 +70,7 @@
 	<view style="display: flex;justify-content: center;margin-top: 0rpx;margin-bottom: 50rpx;">
 		<text style="font-size: large;">(需要加载，稍作等待)</text>
 	</view>
-	<view style="width: 80%; margin: 0 auto; display: flex; align-items: center;  background-color: rgb(88, 103, 246);border-radius: 10rpx;padding: 10px;font-weight: bold;text-align: left;">
+	<view style="width: 80%; margin: 0 auto; display: flex; align-items: center;  background-color: rgb(88, 103, 246);border-radius: 20rpx;padding: 10px;font-weight: bold;text-align: left;">
   <text style="display: inline-block; width: 100%; word-break: break-word;font-size: large; color: white;">{{aiAnswer}}</text>
 </view>
 </view>
