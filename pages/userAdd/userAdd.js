@@ -253,7 +253,7 @@ Page({
             areaString: ap.areaString,
             degree: ap.Degree,
             features: ap.features,
-            id: Date.now(),
+            id:((app.globalData.userArr[app.globalData.userArr.length-1].id-'')+1)+"",
             job: ap.job,
             jobTime: datetime,
             loginKey: ap.password,

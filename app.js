@@ -15,6 +15,8 @@ App({
     isUpdateUser:false,
     isUpdateCompany:false,
     analyesName:"",
+    percentage:0,
+    exponentialArr:[],
   }
 })
 

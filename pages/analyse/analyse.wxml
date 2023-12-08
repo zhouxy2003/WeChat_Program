@@ -1,5 +1,32 @@
 <view class="global">
+	<van-overlay show="{{ isShow }}" bind:click="onClickHide">
+  <view class="wrapper">
+    <view class="block">
+			<van-image width="80" height="80" round src="{{userImg}}" style="display: flex;justify-content: center;align-items: center;margin-top: 50rpx;"/>
+			<view class="inputCard">
+				<view class="inputWord">
+					<image src="../../img/addName.png" class="inputIcon"></image>
+				</view>
+				<input type="text" class="inputData" placeholder="请输入姓名" value="{{username}}" bindinput="nameChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+			</view>
+			<view class="inputCard">
+				<view class="inputWord">
+					<image src="../../img/addKey.png" class="inputIcon"></image>
+				</view>
+				<input type="password" class="inputData" placeholder="请输入密码" value="{{userkey}}" bindinput="keyChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
+			</view>
+			<view style="display: flex;margin-top: 50rpx;">
+				<button style="width: 200rpx;justify-content: flex-start;" type="warn" plain bind:tap="no">取消</button>
+				<button style="width: 200rpx;justify-content: flex-end;" type="primary" plain bind:tap="yes">确认</button>
+			</view>
+		</view>
+  </view>
+</van-overlay>
+
+
+
 	<view class="container">
+		
 		<view>
 			<text class="title">简历分析报告</text>
 		</view>
@@ -13,13 +40,42 @@
 			<view class="circle">
 				<view class="green box"></view>
 			</view>
-			<view  class="circle"><tex>张三</tex></view>
+		
 		</view>
-		<ec-canvas id="mychart-dom-gauge" style="width: 98%; height: 500rpx;margin-top: 0;display: flex;margin-left: 1%; margin-top: 0rpx;" canvas-id="mychart-gauge" ec="{{ ec }}"></ec-canvas>
-		<ec-canvas id="mychart-dom-gauge" style="width: 98%; height: 500rpx;margin-top: 0;display: flex;margin-left: 1%;" canvas-id="mychart-gauge" ec="{{ ec1 }}"></ec-canvas>
+	  <view style="height: 100rpx;">
+			<view class="circle">
+				<text style="margin-left: 20rpx;font-weight: bold;margin-top: 20rpx;">{{name}}</text>
+			</view>
+			<view style="display: flex;justify-content: center;margin-right: 150rpx;margin-top: 50rpx;">
+				<view class="bar">
+					<view class="ball"></view>
+				</view>
+			</view>
+
+			<view style="float: right;">
+				<button style="width: 200rpx;margin-right: 15rpx;margin-top: -20rpx;" type="primary" plain bind:tap="view">点击查看</button>
+			</view>
+		</view>
+		<ec-canvas id="mychart-dom-gauge" style="width: 98%; height: 450rpx;margin-top: 0;display: flex;margin-left: 1%; margin-top: 0rpx;" canvas-id="mychart-gauge" ec="{{ ec }}" wx:if="{{isChart1}}"></ec-canvas>
+		<ec-canvas id="mychart-dom-gauge" style="width: 98%; height: 450rpx;margin-top: 0;display: flex;margin-left: 1%;" canvas-id="mychart-gauge" ec="{{ ec1 }}" wx:if="{{isChart1}}"></ec-canvas>
 
 	</view>
-  <button bind:tap="gettest">This is test botton</button>
-  <input bindinput="userInputAction"  class="input" name="userName" placeholder="请输入用户名" auto-focus="true" />
+	<!-- <button bind:tap="gettest">This is test botton</button> -->
+	<!-- <input bindinput="userInputAction"  class="input" name="userName" placeholder="请输入用户名" auto-focus="true" /> -->
+
+		<view wx:if="{{isAi}}">
+	<view style="display: flex;justify-content: center;margin-top: 20rpx;margin-bottom: 10rpx;">
+		<text style="font-size: large;">听听AI怎么说⬇️</text>
+	</view>
+	<view style="display: flex;justify-content: center;margin-top: 0rpx;margin-bottom: 50rpx;">
+		<text style="font-size: large;">(需要加载，稍作等待)</text>
+	</view>
+	<view style="width: 80%; margin: 0 auto; display: flex; align-items: center;  background-color: rgb(88, 103, 246);border-radius: 10rpx;padding: 10px;font-weight: bold;text-align: left;">
+  <text style="display: inline-block; width: 100%; word-break: break-word;font-size: large; color: white;">{{aiAnswer}}</text>
+</view>
+</view>
+
+
+
 
 </view>

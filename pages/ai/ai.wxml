@@ -3,7 +3,7 @@
     <scroll-view class="chatBox" scroll-into-view="{{scrollIntoView}}" scroll-y="true">
       <van-notice-bar
         left-icon="volume-o"
-        text="鸿蒙系统暂不与AI助手兼容，请尝试切换设备后重新登录后再进行尝试"
+        text="请勿重复发送请求"
       />
 
       <!-- 显示对话框 -->
