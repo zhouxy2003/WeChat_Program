@@ -391,7 +391,50 @@ Page(
         return ageWeights["x+6以上"];
       }
     },
+    // 计算技能得分
+    calculateSkillScore(skillarr) {
+    
+      let skill1 = skillarr; 
+      // console.log('skill',skill1);
+      // 使用 split 方法按逗号分割字符串并存储为数组
+      const resultArray = skill1.split(',');
+      // console.log('几个技能：',resultArray.length);
+      // 获取数组的长度
+      const arrayLength = resultArray.length;
 
+      // 根据数组长度进行不同的计分
+      let score2 = 0;
+
+      if (arrayLength >= 1 && arrayLength <= 3) {
+        score2 = 3;
+      } else if (arrayLength > 3 && arrayLength <= 5) {
+        score2 = 7;
+      } else if (arrayLength > 5 && arrayLength <= 8) {
+        score2 = 10;
+      } else if (arrayLength > 8 && arrayLength <= 10) {
+        score2 = 13;
+      } else if (arrayLength > 10) {
+        score2 = 20;
+      }
+      // console.log(score2);
+      return score2
+    
+  },
+  // 计算薪资得分
+  calculateSalaryScore(salary){
+    const salary1 = salary.match(/\d+/);
+    let score1 = 0;
+
+      if (salary1 < 10) {
+        score1 = 8;
+      } else if (salary1 >= 10 && salary1 <= 30) {
+        score1 = 20;
+      } else if (salary1 > 30) {
+        score1 = 7;
+      }
+      // console.log(score1);
+      return score1;
+  },
     // 根据时间差划分计算时间得分
     calculateTimeScore(timeDiff) {
       const timeRanges = {
@@ -469,13 +512,24 @@ Page(
         "博士": 32
       };
 
+    //    // 计算各部分得分
+    //    // 学历得分
+    // const educationScore = educationWeights[education];
+    //     // 技能得分
+    //   const skillScore = this.calculateSkillScore(skill);
+    //     // 薪资得分
+    //   const salaryScore = this.calculateSalaryScore(salary);
+    //      // 年龄得分
+    //   const ageScore = this.calculateAgeScore(ageRanges[education], age);
+    //      // 入职时间得分
+      // const timeScore = this.calculateTimeScore(timeDiff);
       var degreeScore = educationWeights[n[id - 1].degree];
       var timeScore = this.calculateTimeScore(timeDiff);
-      var featuresScore = 10
-      var ageScore = this.calculateAgeScore(ageRanges[n[id - 1].degree], n[id - 1].age)
-      var salaryScore = 10
+      var featuresScore = this.calculateSkillScore(n[id-1].features);
+      var ageScore = this.calculateAgeScore(ageRanges[n[id - 1].degree], n[id - 1].age);
+      var salaryScore = this.calculateSalaryScore(n[id-1].salary);
       timeDiff = this.dateNum(n[id - 1].jobTime);
-
+      console.log(n[id-1])
       console.log([degreeScore * 50, timeScore * 50, featuresScore * 50, ageScore * 50, salaryScore * 50] + "    " + postion)
       app.globalData.percentage = postion;
 
@@ -491,7 +545,6 @@ Page(
       //   arr : [degreeScore*50,timeScore*50,featuresScore*50,ageScore*50,salaryScore*50]
       // } 
     },
-
     dateNum(dateStr) {
       const year = dateStr.slice(0, dateStr.indexOf("年"));
       const month = dateStr.slice(dateStr.indexOf("年") + 1, dateStr.indexOf("月"));
