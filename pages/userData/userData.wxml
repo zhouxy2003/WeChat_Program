@@ -17,7 +17,9 @@
 				</view>
 				<input type="password" class="inputData" placeholder="请输入密码" value="{{userkey}}" bindinput="keyChange" placeholder-style="color:rgb(200,200,200);font-size:small;left:45rpx" />
 			</view>
-			<button mini style="width: 120rpx;display: flex;justify-content: center;align-items: center;margin-top: 30rpx;" type="primary"  bind:tap="gotoBlock">确认</button>
+			<view style="display: flex;">
+				<button style="width: 120rpx;float: left;margin-top: 30rpx;" type="primary" plain bind:tap="gotoBlock">✔️</button>
+			</view>
 		</view>	
 	</van-overlay>
 
