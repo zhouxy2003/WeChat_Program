@@ -86,6 +86,7 @@ Page({
    this.setData({
      userTable:app.globalData.userArr
    })
+   console.log(app.globalData.userArr);
   },
 
   /**

@@ -127,7 +127,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+    onLoad(options) {
     // wx.cloud.callFunction({
     //   // 云函数名称
     //   name: 'testRequest',
@@ -143,16 +143,14 @@ Page({
     // })
 
 
-    const db = wx.cloud.database();
+
     // console.log(db);
     let that = this;
     //公司数据
-    db.collection('job').get({
+    wx.cloud.callFunction({
+      name: 'getJob', // 替换成你的云函数名称
       success: function (res) {
-        let comData = [];
-        for (let i = 0; i < res.data.length; i++) {
-          comData.push(res.data[i]);
-        }
+        let comData = res.result;
         that.setData({
           companyArr: comData,
           list: comData
@@ -162,20 +160,23 @@ Page({
       }
     });
     //用户数据
-    db.collection('users').get({
-      success: function (res) {
-        let comData = [];
-        for (let i = 0; i < res.data.length; i++) {
-          comData.push(res.data[i]);
-        }
+    wx.cloud.callFunction({
+      name: 'getUser', // 替换成你的云函数名称
+      success: res => {
+        //console.log(res.result) // 获取到的数据
+        let comData = res.result;
         that.setData({
-          userArr:comData,
-          usersArr:comData
+          userArr: comData,
+          usersArr: comData
         });
         app.globalData.userArr = comData;
         console.log(comData);
+      },
+      fail: err => {
+        console.error(err)
       }
     })
+    
 
     
   },
@@ -189,39 +190,38 @@ Page({
     // console.log(db);
     let that = this;
     //公司数据
-    db.collection('job').get({
+    wx.cloud.callFunction({
+      name: 'getJob', // 替换成你的云函数名称
       success: function (res) {
-        let comData = [];
-        for (let i = 0; i < res.data.length; i++) {
-          comData.push(res.data[i]);
-        }
+        let comData = res.result;
         that.setData({
           companyArr: comData,
           list: comData
         });
         app.globalData.companyDataArr = comData;
-        console.log(comData[0]._id);
+        console.log(comData);
       }
     });
     app.globalData.isUpdateUser=false;
     }
     if(app.globalData.isUpdateCompany){
-      const db = wx.cloud.database();
+      // const db = wx.cloud.database();
       // console.log(db);
       let that = this;
-      //用户数据
-      db.collection('users').get({
-        success: function (res) {
-          let comData = [];
-          for (let i = 0; i < res.data.length; i++) {
-            comData.push(res.data[i]);
-          }
+      wx.cloud.callFunction({
+        name: 'getUser', // 替换成你的云函数名称
+        success: res => {
+          //console.log(res.result) // 获取到的数据
+          let comData = res.result;
           that.setData({
-            userArr:comData,
-            usersArr:comData
+            userArr: comData,
+            usersArr: comData
           });
           app.globalData.userArr = comData;
           console.log(comData);
+        },
+        fail: err => {
+          console.error(err)
         }
       })
       app.globalData.isUpdateCompany=false;

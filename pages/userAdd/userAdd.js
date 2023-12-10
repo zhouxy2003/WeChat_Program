@@ -39,7 +39,11 @@ Page({
     clickTime: false,
     isShowAreaErr: false,
     clickArea: false,
-    isAddDataBase: false
+    isAddDataBase: false,
+    usersARR:[]
+  },
+  onLoad(){
+    console.log(app.globalData.userArr[app.globalData.userArr.length-1].id-''+1+"");
   },
   //name双向绑定
   nameChange(e) {
@@ -253,7 +257,7 @@ Page({
             areaString: ap.areaString,
             degree: ap.Degree,
             features: ap.features,
-            id:((app.globalData.userArr[app.globalData.userArr.length-1].id-'')+1)+"",
+            id:app.globalData.userArr[app.globalData.userArr.length-1].id-''+1+"",
             job: ap.job,
             jobTime: datetime,
             loginKey: ap.password,
@@ -263,6 +267,18 @@ Page({
             school: ap.school,
           }
         }).then(res => {
+          wx.cloud.callFunction({
+            name: 'getUser', // 替换成你的云函数名称
+            success: res => {
+              console.log(res.result) // 获取到的数据
+              let comData = res.result;
+              app.globalData.userArr = comData;
+              console.log(comData);
+            },
+            fail: err => {
+              console.error(err)
+            }
+          })
           this.setData({
             isAddDataBase: true
           })
@@ -271,6 +287,7 @@ Page({
            app.globalData.isUpdateCompany=true;
         })
         console.log("信息正确");
+     
       }
       else {
         wx.showModal({
