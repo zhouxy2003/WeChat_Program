@@ -21,7 +21,7 @@ page{
 	background-color: white;
 }
 .check van-image{
-	float: left;
+	display: inline-block;
 	margin-left: 180rpx;
 	margin-top: 40rpx;
 }
@@ -34,7 +34,7 @@ page{
 .inputWord{
 		width: 26%;
 		height: 81rpx;
-		float: left;
+		justify-content: flex-start;
 		margin-left: 2%;
 		margin-top: 20rpx;
 		background-color: white;
@@ -45,7 +45,7 @@ page{
 }
 .inputData{
 	width: 70%;
-	float: right;
+	justify-content: flex-end;
 	margin-right: 2%;
 	margin-top: 20rpx;
 	height: 80rpx;
@@ -53,8 +53,10 @@ page{
 	border-bottom: 1px solid rgb(235, 235, 235);
 }
 .inputCard{
-	margin-top: 230rpx;
+	margin-top: 20rpx;
+	display: flex;
 }
+
 
 
 
